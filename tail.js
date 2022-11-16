@@ -29,3 +29,7 @@ assertEqual(words.length, 3); // original array should still have 3 elements!
 
 console.log(tail(["lighthouse"]));
 console.log(tail([]));
+
+/*
+can also use arr.slice(1) and it won't chagne the original array
+*/
