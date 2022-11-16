@@ -18,7 +18,22 @@ const assertArraysEqual = function(actual, expected) {
   }
 };
 
-assertArraysEqual([1,2,3], [1,2,3]);
-assertArraysEqual([1,2,3], [1,2,"3"]);
-assertArraysEqual("Lighthouse Labs", "Bootcamp");
-assertArraysEqual("Bootcamp", "Bootcamp");
+//Function without will take two arrays and generate a new array of elements from source array that are not found in itemsToRemove array.
+const without = function(source, itemsToRemove) {
+  let tempSource = [];
+  for (let i = 0; i < source.length; i++) {
+    let flag = false;
+    for (let j = 0; j < itemsToRemove.length; j++) {
+      if (source[i] === itemsToRemove[j]) {
+        flag = true;
+      }
+    } if (flag === false) {
+      tempSource.push(source[i]);
+    }
+  }  console.log(tempSource);
+};
+
+const words = ["hello", "world", "lighthouse"];
+without(words, ["lighthouse"]); // no need to capture return value for this test case
+// Make sure the original array was not altered by the without function
+assertArraysEqual(words, ["hello", "world", "lighthouse"]);
