@@ -33,14 +33,6 @@ const eqObjects = function(object1, object2) {
 };
 
 
-// // FUNCTION IMPLEMENTATION
-// const assertObjectsEqual = function(actual, expected) {
-//   
-//   console.log(`Example label: ${inspect(actual)}`);
-// };
-
-
-
 
 //assertArrayEqual will use eqArrays function to compare the two arrays to generate the appropriate assertion.
 const assertObjectsEqual = function(actual, expected) {
@@ -52,7 +44,7 @@ const assertObjectsEqual = function(actual, expected) {
   }
 };
 
-assertObjectsEqual({ a: '1', b: 2 },{ b: 2, a: '1' } ); // ==> Pass
-assertObjectsEqual({ a: '1', b: 2 },{ b: 2, a: '0' } ); // ++> Fail
-assertObjectsEqual({ a: '1', b: 2, c: [1, "b"] },{ b: 2, c:[1, "b"], a: '1' } ); // ==> Pass
-assertObjectsEqual({ a: '1', b: 2, c: [1, "b"] },{ b: 2, c:[1, "c"], a: '1' } ); // ==> Fail
+assertObjectsEqual({ a: '1', b: 2 },{ b: 2, a: '1' }); // ==> Pass
+assertObjectsEqual({ a: '1', b: 2 },{ b: 2, a: '0' }); // ++> Fail
+assertObjectsEqual({ a: '1', b: 2, c: [1, "b"] },{ b: 2, c:[1, "b"], a: '1' }); // ==> Pass
+assertObjectsEqual({ a: '1', b: 2, c: [1, "b"] },{ b: 2, c:[1, "c"], a: '1' }); // ==> Fail

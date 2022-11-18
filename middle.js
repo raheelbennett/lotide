@@ -1,13 +1,15 @@
 // We need a functon to compre each element of both arrays corresponding to their index and if either element don't match then false will be returned.
 const eqArrays = function(arr1, arr2) {
-  let x = true;
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
   for (let index in arr1) {
     if (arr1[index] !== arr2[index]) {
-      x = false;
-      return x;
+      return false;
     }
-  } return x;
+  } return true;
 };
+
 
 //assertArraysEqual will use eqArrays function to compare the two arrays to generate the appropriate assertion.
 const assertArraysEqual = function(actual, expected) {
