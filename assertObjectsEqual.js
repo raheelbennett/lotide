@@ -32,8 +32,6 @@ const eqObjects = function(object1, object2) {
   } return true;
 };
 
-
-
 //assertArrayEqual will use eqArrays function to compare the two arrays to generate the appropriate assertion.
 const assertObjectsEqual = function(actual, expected) {
   const inspect = require('util').inspect; // <= add this line

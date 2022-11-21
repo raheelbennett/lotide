@@ -38,3 +38,7 @@ const words = ["hello", "world", "lighthouse"];
 without(words, ["lighthouse"]); // no need to capture return value for this test case
 // Make sure the original array was not altered by the without function
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+
+
+
+// can use !itemsToRemove.includes(src[item]) as condition to push to new array
