@@ -1,14 +1,4 @@
-// We need a functon to compre each element of both arrays corresponding to their index and if either element don't match then false will be returned.
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  for (let index in arr1) {
-    if (arr1[index] !== arr2[index]) {
-      return false;
-    }
-  } return true;
-};
+const eqArrays = require('./eqArrays');
 
 //assertArrayEqual will use eqArrays function to compare the two arrays to generate the appropriate assertion.
 const assertArraysEqual = function(actual, expected) {
@@ -19,7 +9,4 @@ const assertArraysEqual = function(actual, expected) {
   }
 };
 
-assertArraysEqual([1,2,3], [1,2,3]);
-assertArraysEqual([1,2,3], [1,2,"3"]);
-assertArraysEqual("Lighthouse Labs", "Bootcamp");
-assertArraysEqual("Bootcamp", "Bootcamp");
+module.exports = assertArraysEqual;
