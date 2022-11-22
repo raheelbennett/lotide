@@ -1,10 +1,14 @@
 const head = require('../head');
-const assertEqual = require('../assertEqual'); // We also need to import the assertEqual as well since it is being called to test our head function.
+const assert = require('chai').assert;
 
-
-// TEST CODE for head.js
-assertEqual(head([5,6,7]), 5);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
-assertEqual(head([5]), 5);
-assertEqual(head(5), 5); // expected to fail since actual (input) is not an array
-assertEqual(head([]), 5); //expected to fail
+describe("#head", () => {
+  it("returns 1 for [1, 2, 3]", () => {
+    assert.strictEqual(head([1, 2, 3]), 1);
+  });
+  it("returns '5' for ['5']", () => {
+    assert.strictEqual(head(['5']), '5');
+  });
+  it('returns "Hello" for ["Hello", "Lighthouse", "Labs"]', () => {
+    assert.strictEqual(head(["Hello", "Lighthouse", "Labs"]), 'Hello');
+  });
+});
