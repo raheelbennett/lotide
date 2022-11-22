@@ -42,3 +42,6 @@ assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 
 
 // can use !itemsToRemove.includes(src[item]) as condition to push to new array
+
+
+module.exports = without;

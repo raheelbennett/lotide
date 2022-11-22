@@ -42,3 +42,4 @@ assertArraysEqual(results1, ["t", "t", "w"] );
 assertArraysEqual(results2, ["w", "i", "i"] );
 assertArraysEqual(results3, ["o", "t", "u"] ); //==> //this should fail
 
+module.exports = map;
