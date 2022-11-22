@@ -20,7 +20,7 @@ const assertArraysEqual = function(actual, expected) {
   }
 };
 
-
+//will return a new array based on the results of the callback function.
 const map = function(array, callback) {
   const results = [];
   for (let item of array) {
@@ -29,17 +29,17 @@ const map = function(array, callback) {
   return results;
 }
 
-const words = ["two", "times", "winner"]
+// const words = ["two", "times", "winner"]
 
 
-const results1 = map(words, word => word[0]);
-const results2 = map(words, word => word[1]);
-const results3 = map(words, word => word[2]);
+// const results1 = map(words, word => word[0]);
+// const results2 = map(words, word => word[1]);
+// const results3 = map(words, word => word[2]);
 
-//console.log(results1);
+// //console.log(results1);
 
-assertArraysEqual(results1, ["t", "t", "w"] );
-assertArraysEqual(results2, ["w", "i", "i"] );
-assertArraysEqual(results3, ["o", "t", "u"] ); //==> //this should fail
+// assertArraysEqual(results1, ["t", "t", "w"] );
+// assertArraysEqual(results2, ["w", "i", "i"] );
+// assertArraysEqual(results3, ["o", "t", "u"] ); //==> //this should fail
 
 module.exports = map;
